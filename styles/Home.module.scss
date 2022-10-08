@@ -29,7 +29,7 @@
 }
 
 .title a {
-  color: #0070f3;
+  color: #dee3e8;
   text-decoration: none;
 }
 
@@ -79,8 +79,8 @@
   text-align: left;
   color: inherit;
   text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
+  border: 4px solid #eaeaea;
+  border-radius: 20px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
 }
@@ -88,8 +88,8 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: #f36100;
+  border-color: #35f300;
 }
 
 .card h2 {
@@ -118,10 +118,10 @@
 @media (prefers-color-scheme: dark) {
   .card,
   .footer {
-    border-color: #222;
+    border-color: #f6f3f3;
   }
   .code {
-    background: #111;
+    background: #ffffff;
   }
   .logo img {
     filter: invert(1);
