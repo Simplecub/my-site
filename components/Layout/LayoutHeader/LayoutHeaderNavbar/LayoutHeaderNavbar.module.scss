@@ -15,12 +15,16 @@
     align-items: center;
     padding: 0 10px;
     text-transform: uppercase;
-    color: #fff;
+    color: #0a0a0a;
     text-decoration: none;
 
     &.active,
     &:hover {
-      background-color: rgba(0, 0, 0, 0.4);
+      background-image:  linear-gradient(
+                      to top,
+                      rgb(248, 248, 248),
+                      rgba(0, 0, 0, 0.5)
+      )
     }
   }
 }

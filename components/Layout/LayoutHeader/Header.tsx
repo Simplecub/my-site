@@ -1,4 +1,4 @@
-import Heading from "./Heading";
+
 import Navbar from "./Navbar";
 import {FC} from "react";
 
