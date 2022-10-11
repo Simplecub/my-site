@@ -1,4 +1,4 @@
-import Header from "./LayoutHeader/Header";
+import LayoutHeader from "./LayoutHeader/LayoutHeader";
 import LayoutFooter from "./LayoutFooter/LayoutFooter";
 import {FC, ReactNode} from "react";
 
@@ -12,7 +12,7 @@ type LayoutProps = {
 
 const Layout:FC<LayoutProps> = ({children, socials}) => (
     <>
-        <Header/>
+        <LayoutHeader/>
         {children}
         <LayoutFooter socials={socials}/>
 

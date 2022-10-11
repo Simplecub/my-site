@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.scss'
 import {socialsType} from "../types";
 import LayoutSocials from "../components/Layout/LayoutSocials/LayoutSocials";
 import {FC} from "react";
+import RecentPosts from "../components/Posts/RecentPosts/RecentPosts";
 /*
 export default function Home() {
   return (
@@ -110,6 +111,8 @@ const Home:FC<HomeProps> = ({page}) => (
         <Heading text='Hi, I am John, Creative Technologist'/>
         <Heading tag='h3'
                  text='Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'/>
+
+        <RecentPosts/>
     </div>
 )
 

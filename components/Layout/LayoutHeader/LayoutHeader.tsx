@@ -2,11 +2,11 @@
 import Navbar from "./LayoutHeaderNavbar/Navbar";
 import {FC} from "react";
 
-const Header:FC = () => (
+const LayoutHeader:FC = () => (
     <header>
         <Navbar/>
     </header>
 
 )
 
-export default Header
+export default LayoutHeader
