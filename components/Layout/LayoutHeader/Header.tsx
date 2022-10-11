@@ -1,5 +1,5 @@
 
-import Navbar from "./Navbar";
+import Navbar from "./LayoutHeaderNavbar/Navbar";
 import {FC} from "react";
 
 const Header:FC = () => (

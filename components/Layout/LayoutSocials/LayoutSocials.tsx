@@ -1,7 +1,8 @@
 import Head from "next/head";
-import styles from "../styles/Socials.module.scss";
-import {socialsType} from "../types";
+import styles from "./LayoutSocials.module.scss";
+import {socialsType} from "../../../types";
 import {FC} from "react";
+import {socials} from "./socials";
 
 export interface SocialsProps {
     socials: {
@@ -11,7 +12,7 @@ export interface SocialsProps {
 }[],
 }
 
-const Socials:FC<SocialsProps> = () => {
+const LayoutSocials:FC<SocialsProps> = () => {
        console.log(socials)
     if (!socials) {
         return null
@@ -25,7 +26,7 @@ const Socials:FC<SocialsProps> = () => {
                 {socials && socials.map(({ id, icon, path }) => (
                     <li key={id}>
                         <a href={path} target="_blank" rel="noopener noreferrer">
-                            <i className={`fab fa-${icon}`} aria-hidden="true" />
+                            <i className={`fab fa-${icon} `} aria-hidden="true" />
                         </a>
                     </li>
                 ))}
@@ -33,5 +34,5 @@ const Socials:FC<SocialsProps> = () => {
         </>
     )
 }
-export default Socials;
+export default LayoutSocials;
 

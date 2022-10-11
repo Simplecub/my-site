@@ -6,12 +6,12 @@ import {FC} from "react";
 export interface FooterProps extends SocialsProps  {}
 
 
-const Footer:FC<FooterProps> = ({socials}) => {
+const LayoutFooter:FC<FooterProps> = ({socials}) => {
 
     return (
 
     <footer>
-        <Heading tag="h3" text="Footer"/>
+        <Heading tag="h3" text="LayoutFooter"/>
        <div className={styles.wrapper} >
 
        </div>
@@ -22,4 +22,4 @@ const Footer:FC<FooterProps> = ({socials}) => {
 
 }
 
-export default Footer
+export default LayoutFooter

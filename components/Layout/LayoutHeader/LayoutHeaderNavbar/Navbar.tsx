@@ -1,5 +1,5 @@
 import {useRouter} from "next/router";
-import styles from "../styles/Navbar.module.scss"
+import styles from "./LayoutHeaderNavbar.module.scss"
 import Link from "next/link";
 import Image from "next/image";
 import React, {FC} from "react";

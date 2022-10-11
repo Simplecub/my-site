@@ -1,7 +1,10 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-
+import Heading from "../components/Heading";
+import styles from '../styles/Home.module.scss'
+import {socialsType} from "../types";
+import LayoutSocials from "../components/Layout/LayoutSocials/LayoutSocials";
+import {FC} from "react";
+/*
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -67,3 +70,47 @@ export default function Home() {
     </div>
   )
 }
+
+
+ */
+type socialsTypeProps = {
+    socials: [socialsType]
+}
+
+export const getStaticProps = async () => {
+    const props:HomeProps = {}
+    try {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_HOST}/page/`)
+        const data = await response.json()
+        console.log(data)
+        if (!data) {                    //если нет данных то возвращает объект и next.js перекидывает на 404 ошибку
+            throw new Error("no data")
+        }
+       props.page = data
+    } catch {
+        return {
+            notFound: true
+        }
+    }
+    return {
+        props
+    }
+}
+
+export interface HomeProps {
+    page?: {text: string}
+}
+
+const Home:FC<HomeProps> = ({page}) => (
+    <div className={styles.container}>
+        <Head>
+            <title>Home</title>
+        </Head>
+        {page.text}
+        <Heading text='Hi, I am John, Creative Technologist'/>
+        <Heading tag='h3'
+                 text='Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'/>
+    </div>
+)
+
+export default Home
