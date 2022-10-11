@@ -24,9 +24,11 @@ const RecentPosts: FC<RecentPosts> = () => {
 
     return (
         <>
-            <div>
-                <Heading tag={'h5'} text={'Recent posts'}/>
-                <Link className={style.link} href={'/blog'}> View all</Link>
+            <div className={style.recent}>
+                <div className={style.head}>
+                <Heading tag={'h3'} text={'Recent posts'}/>
+                <a className={style.a} href={'/blog'}> View all</a>
+                </div>
                 <div className={style.grid}>
                     {recent && recent.map(({id, title, date, type, content}) => (
                         <Link href={'/blog'} key={id}>

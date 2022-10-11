@@ -83,6 +83,7 @@
   border-radius: 20px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
+  background-color: #dbeedd;
 }
 
 .card:hover,
@@ -107,12 +108,27 @@
   height: 1em;
   margin-left: 0.5rem;
 }
-.div a {
+.a {
   align-items: center;
   justify-content: right;
-color: #35f300;
+color: #25bfe2;
+  &:hover {
+    color: #9c7f96;
+  }
 }
 
+.recent {
+  margin: 0 0 1rem 0;;
+  background-color: #baeaf1;
+
+}
+.head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 2rem 0 2rem;;
+}
 
 @media (max-width: 600px) {
   .grid {
