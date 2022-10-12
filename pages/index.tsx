@@ -4,7 +4,8 @@ import styles from '../styles/Home.module.scss'
 import {socialsType} from "../types";
 import LayoutSocials from "../components/Layout/LayoutSocials/LayoutSocials";
 import {FC} from "react";
-import RecentPosts from "../components/Posts/RecentPosts/RecentPosts";
+import PostsRecent from "../components/Posts/PostsRecent/PostsRecent";
+import {postsAll} from '../components/Posts/postsAll'
 /*
 export default function Home() {
   return (
@@ -98,9 +99,11 @@ export const getStaticProps = async () => {
     }
 }
 
-export interface HomeProps {
+
+export interface HomeProps   {
     page?: {text: string}
 }
+
 
 const Home:FC<HomeProps> = ({page}) => (
     <div className={styles.container}>
@@ -112,7 +115,7 @@ const Home:FC<HomeProps> = ({page}) => (
         <Heading tag='h3'
                  text='Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'/>
 
-        <RecentPosts/>
+        <PostsRecent />
     </div>
 )
 

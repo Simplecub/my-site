@@ -5,7 +5,8 @@ import Image from "next/image";
 import React, {FC} from "react";
 
 const navigation = [
-    {id: 1, title: 'Works', path: '/'},
+   // {id: 0, title: 'Home', path: '/'},
+    {id: 1, title: 'Works', path: '/works'},
     {id: 2, title: 'Blog', path: '/blog'},
     {id: 3, title: 'Contact', path: '/contact'},
 ];
@@ -16,7 +17,7 @@ const Navbar: FC = () => {
     return (
         <nav className={styles.nav}>
             <div className={styles.nav}>
-                <Link  href={navigation[0].path}>
+                <Link  href={'/'}>
                     <div>
                         <Image src="/logob.svg" width={60} height={30} alt="LOGO" />
                     </div>

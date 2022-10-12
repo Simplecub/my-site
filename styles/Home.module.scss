@@ -83,6 +83,7 @@
   border-radius: 20px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
+  max-height: 420px;
   background-color: #dbeedd;
 }
 
@@ -120,7 +121,7 @@ color: #25bfe2;
 .recent {
   margin: 0 0 1rem 0;;
   background-color: #baeaf1;
-
+border-radius: 10px;
 }
 .head {
   display: flex;
@@ -134,9 +135,15 @@ color: #25bfe2;
   .grid {
     width: 100%;
     flex-direction: column;
+
+  }
+
+}
+@media (max-width: 856px) {
+  .a {
+    display: none;
   }
 }
-
 @media (prefers-color-scheme: dark) {
   .card,
   .footer {

@@ -6,7 +6,7 @@ import {FC} from "react";
 import { format } from 'date-fns'
 
 
-export interface RecentPosts {
+export interface PostsRecent {
     postsAll: {
         id: number,
         title: string,
@@ -16,7 +16,7 @@ export interface RecentPosts {
     }[]
 }
 
-const RecentPosts: FC<RecentPosts> = () => {
+const PostsRecent:FC = () => {
 
 
     const recent = postsAll.sort((a, b) => +(b.date) - +(a.date)).slice(0, 2)
@@ -26,7 +26,7 @@ const RecentPosts: FC<RecentPosts> = () => {
         <>
             <div className={style.recent}>
                 <div className={style.head}>
-                <Heading tag={'h3'} text={'Recent posts'}/>
+                <Heading tag={'h3'} text={'Recent posts:'}/>
                 <a className={style.a} href={'/blog'}> View all</a>
                 </div>
                 <div className={style.grid}>
@@ -36,7 +36,7 @@ const RecentPosts: FC<RecentPosts> = () => {
                                 <Heading tag='h2' text={title}/>
                                 <h6>{format(date,'dd MMM yyyy') + ' | '} {type.join(', ')}
                                 </h6>
-                                <p>{content}
+                                <p>{content.length >150 ? content.slice(0, 149).concat('...') : content}
                                 </p>
                             </div>
                         </Link>
@@ -48,4 +48,4 @@ const RecentPosts: FC<RecentPosts> = () => {
 }
 
 
-export default RecentPosts
+export default PostsRecent
