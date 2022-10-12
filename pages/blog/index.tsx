@@ -2,6 +2,7 @@ import Head from "next/head";
 import Heading from "../../components/Heading";
 import Link from "next/link";
 import styles from "../../styles/Home.module.scss";
+import Posts from "../../components/Posts/Posts";
 
 
 const Blog = ({blogs}) => (
@@ -10,14 +11,8 @@ const Blog = ({blogs}) => (
         <title>Blog</title>
     </Head>
         <Heading text="Blog List:" tag="h1" />
-        <ul>
-            {blogs && blogs.map(({id, title}) => (
-                    <li key={id}>
-                        <Link href={`/posts/${id}`}>{title}</Link>
-                    </li>
-                )
-            )}
-        </ul>
+      <Posts/>
+
     </div>
 
 )
