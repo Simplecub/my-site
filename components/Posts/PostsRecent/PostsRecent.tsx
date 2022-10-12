@@ -1,6 +1,6 @@
 import {postsAll} from '../postsAll'
 import Heading from "../../Heading";
-import style from '/styles/Home.module.scss'
+import style from '../PostsRecent/PostsRecent.module.scss'
 import Link from "next/link";
 import {FC} from "react";
 import { format } from 'date-fns'

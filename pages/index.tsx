@@ -6,6 +6,7 @@ import LayoutSocials from "../components/Layout/LayoutSocials/LayoutSocials";
 import {FC} from "react";
 import PostsRecent from "../components/Posts/PostsRecent/PostsRecent";
 import {postsAll} from '../components/Posts/postsAll'
+
 /*
 export default function Home() {
   return (

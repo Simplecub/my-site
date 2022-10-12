@@ -1,6 +1,6 @@
 import Heading from "../../Heading";
 
-import styles from '../../../styles/Home.module.scss'
+import styles from './LayoutFooter.module.scss'
 import LayoutSocials, {SocialsProps} from "../LayoutSocials/LayoutSocials";
 import {FC} from "react";
 export interface FooterProps extends SocialsProps  {}
@@ -9,17 +9,13 @@ export interface FooterProps extends SocialsProps  {}
 const LayoutFooter:FC<FooterProps> = ({socials}) => {
 
     return (
-
-    <footer>
-        <Heading tag="h3" text="LayoutFooter"/>
-       <div className={styles.wrapper} >
-
+    <footer className={styles.footer} >
+       <div>
+           <LayoutSocials socials={socials}/>
+           <Heading tag="h3" text="LayoutFooter"/>
        </div>
-        <LayoutSocials socials={socials}/>
     </footer>
-
     )
-
 }
 
 export default LayoutFooter

@@ -22,8 +22,8 @@ main {
   padding: 20px;
 }
 
-header,
-footer {
+header
+ {
   min-height: 80px;
 }
 
@@ -38,19 +38,6 @@ header {
   padding: 0 20px;
 }
 
-footer {
-  background-image: linear-gradient(
-          to bottom,
-          rgb(248, 248, 248),
-          rgba(0, 0, 0, 0.5)
-  );
-  text-align: center;
-  font-size: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
-}
 
 .a {
   color: #e2093e;
