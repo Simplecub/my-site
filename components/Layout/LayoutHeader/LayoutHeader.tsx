@@ -1,9 +1,9 @@
 
 import Navbar from "./LayoutHeaderNavbar/Navbar";
 import {FC} from "react";
-
+import style from "./LayoutHeader.module.scss"
 const LayoutHeader:FC = () => (
-    <header>
+    <header className={style.header}>
         <Navbar/>
     </header>
 
