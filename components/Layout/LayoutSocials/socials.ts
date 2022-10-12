@@ -2,7 +2,7 @@
 export const socials = [
     {
         id: 1,
-        title: 'youtube',
+        icon: 'youtube',
         path: 'https://youtube.com',
     },
     {
